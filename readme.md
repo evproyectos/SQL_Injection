@@ -25,7 +25,7 @@ inyección de instrucciones maliciosas dentro de la consulta SQL.
 A continuación se muestra un ejemplo de cómo se vería un intento de
 ataque por SQL Injection:
 
-![Intento de SQL Injection](img/sql_injection.png)
+![Intento de SQL Injection](docs/img/sql_injection.png)
 
 ------------------------------------------------------------------------
 
