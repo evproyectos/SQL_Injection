@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body>
+
+<h2>Login</h2>
+<input id="logEmail" placeholder="Email">
+<input id="logPass" type="password" placeholder="Password">
+<button onclick="login()">Login</button>
+
+<script>
+
+async function login() {
+    const res = await fetch("/login", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+        email: logEmail.value,
+        password: logPass.value
+        })
+    });
+
+    const text = await res.text();
+    alert(text);
+
+    if (res.ok) {
+        window.location.href = "/welcome";
+    }
+}
+</script>
+
+</body>
+</html>
